@@ -8,7 +8,7 @@ import {
 } from "firebase/firestore";
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { auth, db } from "../Firebaseconfig";
+import { auth, db } from "../firebase.config";
 
 const SignUp = () => {
   const [formData, setformData] = useState({
