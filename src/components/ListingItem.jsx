@@ -22,7 +22,7 @@ const ListingItem = ({ listing, id, onDelete, onEdit }) => {
           <div className="categoryListingDetails">
             <p className="categoryListingLocation">{listing.address}</p>
             <p className="categoryListingName">{listing.name}</p><br />
-            {listing.discount && <p className="categoryListingPrice">{listing.discount}</p>}
+            {listing.discount && <p className="categoryListingPrice">{listing.discount} %Off*</p>}
             {listing.price && <p>Price: {listing.price}/month</p>}
             
             {/* <p className="categoryListingPrice">
