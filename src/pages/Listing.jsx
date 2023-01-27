@@ -92,16 +92,8 @@ const Listing = () => {
         )}
 
         <ul className="listingDetailsList">
-          <li>
-            {listing.bedrooms > 1
-              ? `${listing.bedrooms} Bedrooms`
-              : "1 Bedroom"}
-          </li>
-          <li>
-            {listing.bathrooms > 1
-              ? `${listing.bathrooms} Bathrooms`
-              : "1 Bathrooms"}
-          </li>
+        
+          {listing.price && <h4>Price: {listing.price}/month</h4>}
           {/* <li>{listing.parking && "Parking Spot"}</li>
           <li>{listing.furnished && "Furnished"}</li> */}
           <button type="button" className="primaryButtonMenu">
@@ -109,6 +101,7 @@ const Listing = () => {
               Menu
             </a>
           </button>
+
         </ul>
 
         <p className="listingLocationTitle">Location</p>

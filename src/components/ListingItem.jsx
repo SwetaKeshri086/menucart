@@ -3,8 +3,10 @@ import { ReactComponent as DeleteIcon } from "../assets/svg/deleteIcon.svg";
 import { ReactComponent as EditIcon } from "../assets/svg/editIcon.svg";
 import bedIcon from "../assets/svg/bedIcon.svg";
 import bathtubIcon from "../assets/svg/bathtubIcon.svg";
+import {FaBiking, FaPhone} from "react-icons/fa"
 
 const ListingItem = ({ listing, id, onDelete, onEdit }) => {
+  console.log(listing)
   return (
     <div>
       <li className="categoryListing">
@@ -21,6 +23,7 @@ const ListingItem = ({ listing, id, onDelete, onEdit }) => {
             <p className="categoryListingLocation">{listing.address}</p>
             <p className="categoryListingName">{listing.name}</p><br />
             {listing.discount && <p className="categoryListingPrice">{listing.discount}</p>}
+            {listing.price && <p>Price: {listing.price}/month</p>}
             
             {/* <p className="categoryListingPrice">
               $
@@ -35,12 +38,12 @@ const ListingItem = ({ listing, id, onDelete, onEdit }) => {
             </p> */}
 
             <div className="categoryListingInfoDiv">
-              <img src={bedIcon} alt="bed" />
+              <FaBiking height="24px" width="24px"/>
               <p className="categoryListingInfoText">
                 {listing.homeDel ? "Avaliable" : "Not Avaliable"}
               </p>
 
-              <img src={bathtubIcon} alt="bathtub" />
+              <FaPhone/>
               <p className="categoryListingInfoText">
                 {listing.contact}
               </p>

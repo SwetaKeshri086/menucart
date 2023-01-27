@@ -104,10 +104,15 @@ const Category = () => {
     <div className="category">
       <header>
         <p className="pageHeader">
-          {params.categoryName === "bailey-road" ? "Mess in Bailey Road" : 
-          "Mess in Boring Road"}
+          {/* {params.categoryName === "bailey-road" ? "Mess in Bailey Road" : 
+          "Mess in Boring Road"  } */}
+          {params.categoryName === "bailey-road" && "Mess in Bailey Road"}
+          {params.categoryName === "boring-road" && "Mess in Boring Road"}
+          {params.categoryName === "kankadbagh" && "Mess in Kankarbagh"}
+          {params.categoryName === "kadamkuan" && "Mess in kadamkuan"}
         </p>
       </header>
+     
 
       {loading ? (
         <Spinner />
@@ -138,6 +143,7 @@ const Category = () => {
       )}
     </div>
   );
-};
+  };
+
 
 export default Category;
